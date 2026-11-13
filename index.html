@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zombie Survival - Hospital Infected</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #victory-screen {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.92);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #victory-screen h1 {
+            color: #39ff88;
+            font-size: 42px;
+            text-shadow: 0 0 20px #19d65b;
+        }
+
+        #victory-screen h2 {
+            color: #ffffff;
+        }
+
+        #victory-screen p {
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- Configuración de módulos Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+</head>
+<body>
+
+    <div id="game-container"></div>
+
+    <div id="menu">
+        <h1>ZOMBIE SURVIVAL</h1>
+        <h2>HOSPITAL INFECTED</h2>
+
+        <p>
+            Sobrevive al hospital y alcanza la zona de extracción.
+        </p>
+
+        <button id="start-button">
+            INICIAR PARTIDA
+        </button>
+
+        <p class="instructions">
+            WASD: Moverse | Mouse: Mirar alrededor
+        </p>
+    </div>
+
+    <div id="crosshair">+</div>
+
+    <div id="hud">
+        <div>HOSPITAL INFECTED</div>
+        <div id="status">Pulsa para comenzar</div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+    <div id="victory-screen">
+        <h1>¡MISIÓN COMPLETADA!</h1>
+        <h2>HAS SOBREVIVIDO AL HOSPITAL</h2>
+        <p>Lograste alcanzar la zona de extracción.</p>
+    </div>
+
+</body>
+</html>
